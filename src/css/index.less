@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+    body{
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+        overflow: hidden;
+        .wrapper{
+            position: relative;
+            width:100vw;
+            height:100vh;
+            padding-top:60px;
+            box-sizing: border-box;
+            background-color:rgba(0, 0, 0,0.2);
+            .round-box{
+                position: relative;
+                width:70%;
+                height:0;
+                padding-top:70%;
+                margin:0 auto;
+                .bg-box{
+                    position: absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color:#000;
+                    img{
+                        width: 75%;
+                        height:75%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .song-info{
+                margin-top: 20px;
+                width:100%;
+                height:126px;
+                color:#fff;
+                text-align: center;
+                .song-name{
+                    font-size:24px;
+                    line-height:36px;
+                    margin-bottom: 8px;
+                }
+                .song-singer{
+                    font-size:20px;
+                    line-height:36px;
+                }
+                .song-album{
+                    font-size:18px;
+                    // transform: translateX()
+                }
+            }
+            .bar-box{
+                display: flex;
+                .starTime,  
+                .endTime{
+                    width:60px;
+                    height:40px;
+                    line-height:40px;
+                    text-align: center;
+                    font-size:14px;
+                    color:#fff;
+                }
+                .pro-wrap{
+                    position: relative;
+                    flex:1;
+                    overflow: hidden;
+                    padding-left:2px;
+                    padding-right:0px;
+                    .pro-bottom{
+                        position: absolute;
+                        top:20px;
+                        width: 100%;
+                        height:1px;
+                        background-color:rgba(255, 255, 255, 0.5);                       
+                    }
+                    .pro-top{
+                        position: absolute;
+                        top:20px;
+                        width:100%;
+                        height:1px;
+                        transform: translateX(-100%);
+                        background-color:rgba(255, 255, 255);                     
+                        .slider{
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            top:-10px;
+                            right:-10px;
+                            width:21px;
+                            height:21px;
+                        }
+                        .slider::after{
+                            content:'';
+                            display: block;
+                            width:5px;
+                            height:5px;
+                            background:#fff;
+                        }
+                    }
+                }
+            }
+            .handle-box{
+                display: flex;
+                position: absolute;
+                bottom:0;
+                width:100%;
+                height:60px;
+                background-color:rgba(0, 0, 0, 0.5);
+                .btn{
+                    flex:1;
+                    height: 100%;
+                    background-position: center center;
+                    background-size:20px;
+                    background-repeat: no-repeat;
+                }
+                .like{
+                    background-image: url(../img/icon-like.png);
+                }
+                .liking{
+                    background-image: url(../img/icon-like-solid.png);
+                }
+                .prev{
+                    background-image: url(../img/icon-prev.png);
+                }
+                .play{
+                    background-image: url(../img/icon-play.png);
+                }
+                .playing{
+                    background-image: url(../img/icon-pause.png);
+                }
+                .next{
+                    background-image: url(../img/icon-next.png);
+                }
+                .list{
+                    background-image: url(../img/icon-list.png);
+                }
+                
+            }
+            .list-box{
+                position: absolute;
+                bottom: 0;
+                width:100%;
+                background-color:#fff;
+                text-align: center;
+                font-size: 16px;
+                font-weight: bolder;
+                display: none;
+                ul{
+                    padding-top:20px;
+                    width:100%;
+                    li{
+                        padding:10px 0;
+                        border-bottom:1px solid rgba(0, 0, 0, 0.5);
+                        span{
+                            margin: 0 10px;
+                        }
+                    }
+                    .song{
+                        background:rgba(255, 0, 0, 0.3);
+                    }
+                }
+                .close{
+                    position: absolute;
+                    right:0;
+                    top:0;
+                    width:20px;
+                    height:20px;
+                    background:#000;
+                }
+            }
+            .show{
+                display:block;
+            }
+            .hide{
+                display: none;
+            }
+        }
+       
+    }
+}
